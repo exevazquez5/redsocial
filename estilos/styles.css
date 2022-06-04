@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 10px 10px;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Login */
+.form-login{
+    grid-column: 1/6;
+}
+input{
+    box-sizing: border-box;
+    border-color: #0069ab 3px solid;
+
+}
+
+/* Página principal */
+.header{
+    display: flex;
+    background-color: #14171A;
+    height: 85px;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.header h1{
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
+    color: white;
+    margin-right: 30px;
+}
+.logo{
+    margin-right: auto;
+    margin-left: 30px;
+}
+a{
+    text-decoration: none;
+}
+nav a:visited{
+    color: white;
+}
+nav a:hover{
+    color: #1DA1F2;
+}
+.container > .top-nav:hover{
+    cursor: pointer;
+    background-color: black;
+}
+
+.container{
+    background-color: #fff;
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+    gap: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+} 
+    .container > .post-amigos,
+    .container > .top-nav,
+    .container > .aside,
+    .container > .form-datos,
+    .container > .form-login,
+    .container > .footer
+    .container > .post-gente{
+        background-color: #fff;
+        padding: 20px;
+        border: 2px solid black;
+}
+
+.container > .top-nav,
+.container > .footer{
+    grid-column: 1/6;
+    background-color: #14171A;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.container > .post-gente{
+    justify-content: flex-start;
+    grid-column: 2/5;
+    display: flex;
+    flex-direction: column;
+    background-color: #afbfcb;
+}
+.post-gente img{
+    width: 100%;
+    max-width: 300px;
+}
+.post-gente h4{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 25px;
+    margin-top: 10px;
+    text-shadow: 0 0 15px #999;
+}
+.post-gente h4:hover{
+    cursor: pointer;
+    color: #0069ab;
+}
+.post-gente p{
+    font-size: 14px;
+    padding: 10px;
+}
+.container > .aside{
+    grid-row: 2;
+    padding: 8px;
+}
+.aside img{
+    width: 100%;
+}
+.container > .aside#aside1{
+    
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease; 
+}
+.container > .aside#aside2{
+    grid-column: 5;
+    display: flex;
+    flex-direction: column;
+    
+}
+.aside#aside1 img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px #999;
+}
+.container > .aside#aside1:hover{
+    cursor: pointer;
+    background-color: #14171A;
+    color: #fff;
+}
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+
+
+/* media querys */
+
+@media screen and (max-width: 768px){
+    .container{
+        background-color: #fff;
+        text-align: center;
+        width: 90%;
+        max-width: 1000px;
+        margin: 1.6em auto;
+        gap: 10px;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, );
+    }
+    .aside#aside1{
+        grid-row: 2;
+        grid-column: 1/2;
+    }
+    .container > .aside#aside2{
+        background-color: #1DA1F2;
+        grid-row: 3;
+        grid-column: 1/5;
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+    .container > .aside#aside2 img{
+       grid-column: 1/4;
+       width: 25%;
+    }
+    .button {
+        padding: 0.25em 0.75em;
+      }
+    .post-gente{
+        width: 100%;
+        grid-column: 2/4;
+        grid-row: 2;
+    }
+    .post-amigos{
+        width: 100%;
+    }
+}
+
+
+/* Mi perfil */
+.banner-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 15px;
+}
+.banner-container img{
+    border: #414141 solid 5px;
+    width: 70%;
+}
+.foto-perfil img{    
+    border: #414141 solid 5px;
+    width: 50%;
+}
+
+
+/* datos-perfil */
+.form-datos{
+    grid-column: 1/6;
+}
